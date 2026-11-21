@@ -5,241 +5,508 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Muhammad Daffa | Portfolio</title>
+<title>Muhammad Daffa — Digital Creator &amp; Web Developer</title>
+<meta name="description" content="Portofolio Muhammad Daffa — Graphic Designer, Internet Technician, dan Freelancer dari Kediri. Lihat project DAFFTECH dan Kuradapt.">
+<meta name="theme-color" content="#050816">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23050816'/><text y='74' x='50' text-anchor='middle' font-size='64' font-family='Arial' font-weight='bold' fill='%2300c8ff'>D</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scroll-progress"></div>
 
-<header class="header">
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+    <span class="preloader-logo">D<span>.</span></span>
+</div>
 
-<a href="#" class="logo">
-Muhammad <span>Daffa</span>
-</a>
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
 
-<i class="fa-solid fa-bars" id="menu-icon"></i>
+    <a href="#home" class="logo">
+        Daffa<span>.</span>
+    </a>
 
-<nav class="navbar">
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<a href="#home">Home</a>
+    <a href="#contact" class="header-cta">
+        <i class="fa-regular fa-paper-plane"></i> Hire Me
+    </a>
 
-<a href="#about">About</a>
-
-<a href="#skills">Skills</a>
-
-<a href="#contact">Contact</a>
-
-</nav>
+    <i class="fa-solid fa-bars" id="menu-icon" aria-label="Menu"></i>
 
 </header>
 
-<!-- ================= HERO ================= -->
-
+<!-- ============ HERO ============ -->
 <section class="hero" id="home">
-<div class="hero-text">
 
-    <p class="hello">
-        DIGITAL CREATOR
-    </p>
+    <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="grid-overlay"></span>
+    </div>
 
-    <h1>
-        Building <span>Modern Digital</span><br>
-        Experiences
-    </h1>
+    <div class="hero-text">
 
-    <h3>
-        Graphic Designer • Internet Technician • Freelancer
-    </h3>
+        <span class="badge reveal">
+            <i class="fa-solid fa-circle"></i> Open to Opportunities
+        </span>
 
-    <p>
-        Saya membantu menciptakan desain kreatif, website modern,
-        serta solusi teknologi yang profesional, cepat, dan
-        berkualitas untuk individu, bisnis, maupun organisasi.
-    </p>
+        <p class="hello reveal">DIGITAL CREATOR — KEDIRI, INDONESIA</p>
 
-    <div class="buttons">
+        <h1 class="reveal">
+            Building <span class="grad">Modern Digital</span><br>
+            Experiences
+        </h1>
 
-        <a href="#contact" class="btn">
-            Hire Me
-        </a>
+        <h3 class="hero-role reveal">
+            Saya seorang <span id="typed"></span><span class="cursor">|</span>
+        </h3>
 
-        <a href="#about" class="btn2">
-            About Me
-        </a>
+        <p class="lead reveal">
+            Saya membantu menciptakan desain kreatif, website modern,
+            serta solusi teknologi yang profesional, cepat, dan
+            berkualitas untuk individu, bisnis, maupun organisasi.
+        </p>
+
+        <div class="buttons reveal">
+            <a href="#projects" class="btn">
+                Lihat Project <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#contact" class="btn2">
+                Hire Me
+            </a>
+        </div>
+
+        <div class="hero-stats reveal">
+
+            <div class="stat">
+                <strong><span class="counter" data-target="6">0</span>+</strong>
+                <small>Produk Digital</small>
+            </div>
+
+            <div class="stat">
+                <strong><span class="counter" data-target="2">0</span>+</strong>
+                <small>Web App Live</small>
+            </div>
+
+            <div class="stat">
+                <strong><span class="counter" data-target="3">0</span></strong>
+                <small>Layanan Jasa</small>
+            </div>
+
+            <div class="stat">
+                <strong><span class="counter" data-target="100">0</span>%</strong>
+                <small>Dikerjakan Sendiri</small>
+            </div>
+
+        </div>
 
     </div>
 
-</div>
+    <div class="hero-image reveal">
 
-<div class="hero-image">
+        <div class="image-ring" aria-hidden="true"></div>
 
-<img src="images/profile.png" alt="Muhammad Daffa">
+        <div class="hero-photo">
+            <img src="images/profile.png" alt="Muhammad Daffa">
+        </div>
 
-</div>
+        <span class="float-tag tag-1">
+            <i class="fa-solid fa-pen-ruler"></i> Graphic Design
+        </span>
+
+        <span class="float-tag tag-2">
+            <i class="fa-solid fa-code"></i> Web Development
+        </span>
+
+        <span class="float-tag tag-3">
+            <i class="fa-solid fa-wifi"></i> Network Tech
+        </span>
+
+    </div>
+
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
 
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+        <span>Graphic Design</span><i class="fa-solid fa-star-of-life"></i>
+        <span>HTML5</span><i class="fa-solid fa-star-of-life"></i>
+        <span>CSS3</span><i class="fa-solid fa-star-of-life"></i>
+        <span>JavaScript</span><i class="fa-solid fa-star-of-life"></i>
+        <span>Landing Page</span><i class="fa-solid fa-star-of-life"></i>
+        <span>Internet Technician</span><i class="fa-solid fa-star-of-life"></i>
+        <span>Problem Solving</span><i class="fa-solid fa-star-of-life"></i>
+        <span>Graphic Design</span><i class="fa-solid fa-star-of-life"></i>
+        <span>HTML5</span><i class="fa-solid fa-star-of-life"></i>
+        <span>CSS3</span><i class="fa-solid fa-star-of-life"></i>
+        <span>JavaScript</span><i class="fa-solid fa-star-of-life"></i>
+        <span>Landing Page</span><i class="fa-solid fa-star-of-life"></i>
+        <span>Internet Technician</span><i class="fa-solid fa-star-of-life"></i>
+        <span>Problem Solving</span><i class="fa-solid fa-star-of-life"></i>
+    </div>
+</div>
 
+<!-- ============ ABOUT ============ -->
 <section class="about" id="about">
 
-<div class="section-title">
-<h2>About Me</h2>
-<p>Get to know me better</p>
-</div>
+    <div class="section-title reveal">
+        <span class="sec-tag">01 — Tentang</span>
+        <h2>About Me</h2>
+        <p>Get to know me better</p>
+    </div>
 
-<div class="about-container">
+    <div class="about-container">
 
-<div class="about-image">
-<img src="images/profile.png" alt="Muhammad Daffa">
-</div>
-
-<div class="about-content">
-
-    <h3>Who Am I?</h3>
-
-    <p>
-        Saya adalah seorang Graphic Designer, Internet Technician,
-        dan Freelancer yang memiliki minat besar di bidang teknologi,
-        desain grafis, serta pengembangan website modern.
-    </p>
-
-    <p>
-        Saya senang mempelajari teknologi baru, menciptakan desain
-        yang menarik, dan membantu memberikan solusi digital yang
-        profesional, cepat, dan berkualitas.
-    </p>
-
-    <div class="about-info">
-
-        <div class="info-box">
-            <h4>Nama</h4>
-            <span>Muhammad Daffa</span>
+        <div class="about-image reveal">
+            <div class="photo-frame">
+                <img src="images/profile.png" alt="Muhammad Daffa">
+            </div>
+            <div class="exp-badge">
+                <strong>3+</strong>
+                <span>Tahun<br>ngoprek</span>
+            </div>
         </div>
 
-        <div class="info-box">
-            <h4>Lokasi</h4>
-            <span>Kediri, Jawa Timur</span>
-        </div>
+        <div class="about-content reveal">
 
-        <div class="info-box">
-            <h4>Email</h4>
-            <span>daffaulumuddin01@gmail.com</span>
-        </div>
+            <h3>Who Am I?</h3>
 
-        <div class="info-box">
-            <h4>Status</h4>
-            <span>Open to Opportunities</span>
+            <p>
+                Saya adalah seorang Graphic Designer, Internet Technician,
+                dan Freelancer yang memiliki minat besar di bidang teknologi,
+                desain grafis, serta pengembangan website modern.
+            </p>
+
+            <p>
+                Saya senang mempelajari teknologi baru, menciptakan desain
+                yang menarik, dan membantu memberikan solusi digital yang
+                profesional, cepat, dan berkualitas.
+            </p>
+
+            <div class="about-info">
+
+                <div class="info-box">
+                    <i class="fa-regular fa-user"></i>
+                    <div>
+                        <h4>Nama</h4>
+                        <span>Muhammad Daffa</span>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Lokasi</h4>
+                        <span>Kediri, Jawa Timur</span>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <span>daffaulumuddin01@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <div>
+                        <h4>Status</h4>
+                        <span>Open to Opportunities</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-socials">
+                <a href="https://github.com/daffaull18" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/d_a_p_p_u_l/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@d_a_p_p_u_l" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="mailto:daffaulumuddin01@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
         </div>
 
     </div>
 
-</div>
-
 </section>
 
-<!-- ================= SKILLS ================= -->
-
+<!-- ============ SKILLS ============ -->
 <section class="skills" id="skills">
 
-<div class="section-title">
-<h2>My Skills</h2>
-<p>My expertise and experience</p>
-</div>
+    <div class="section-title reveal">
+        <span class="sec-tag">02 — Keahlian</span>
+        <h2>My Skills</h2>
+        <p>My expertise and experience</p>
+    </div>
 
-<div class="skills-container">
+    <div class="skills-container">
 
-<div class="skill-box">
-<div class="skill-title">
-<span>Graphic Design</span>
-<span>95%</span>
-</div>
+        <div class="skill-box reveal">
+            <div class="skill-title">
+                <span><i class="fa-solid fa-pen-nib"></i> Graphic Design</span>
+                <span>95%</span>
+            </div>
+            <div class="progress-bar"><div class="progress" data-width="95"></div></div>
+        </div>
 
-<div class="progress-bar">
-<div class="progress graphic"></div>
-</div>
-</div>
+        <div class="skill-box reveal">
+            <div class="skill-title">
+                <span><i class="fa-brands fa-html5"></i> HTML</span>
+                <span>90%</span>
+            </div>
+            <div class="progress-bar"><div class="progress" data-width="90"></div></div>
+        </div>
 
-<div class="skill-box">
-<div class="skill-title">
-<span>HTML</span>
-<span>90%</span>
-</div>
+        <div class="skill-box reveal">
+            <div class="skill-title">
+                <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                <span>85%</span>
+            </div>
+            <div class="progress-bar"><div class="progress" data-width="85"></div></div>
+        </div>
 
-<div class="progress-bar">
-<div class="progress html"></div>
-</div>
-</div>
+        <div class="skill-box reveal">
+            <div class="skill-title">
+                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span>65%</span>
+            </div>
+            <div class="progress-bar"><div class="progress" data-width="65"></div></div>
+        </div>
 
-<div class="skill-box">
-<div class="skill-title">
-<span>CSS</span>
-<span>85%</span>
-</div>
+        <div class="skill-box reveal">
+            <div class="skill-title">
+                <span><i class="fa-solid fa-network-wired"></i> Internet Technician</span>
+                <span>90%</span>
+            </div>
+            <div class="progress-bar"><div class="progress" data-width="90"></div></div>
+        </div>
 
-<div class="progress-bar">
-<div class="progress css"></div>
-</div>
-</div>
+        <div class="skill-box reveal">
+            <div class="skill-title">
+                <span><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+                <span>88%</span>
+            </div>
+            <div class="progress-bar"><div class="progress" data-width="88"></div></div>
+        </div>
 
-<div class="skill-box">
-<div class="skill-title">
-<span>JavaScript</span>
-<span>65%</span>
-</div>
-
-<div class="progress-bar">
-<div class="progress js"></div>
-</div>
-</div>
-
-<div class="skill-box">
-<div class="skill-title">
-<span>Internet Technician</span>
-<span>90%</span>
-</div>
-
-<div class="progress-bar">
-<div class="progress network"></div>
-</div>
-</div>
-
-<div class="skill-box">
-<div class="skill-title">
-<span>Problem Solving</span>
-<span>88%</span>
-</div>
-
-<div class="progress-bar">
-<div class="progress problem"></div>
-</div>
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- ============ PROJECTS ============ -->
+<section class="projects" id="projects">
 
+    <div class="section-title reveal">
+        <span class="sec-tag">03 — Karya</span>
+        <h2>My Projects</h2>
+        <p>Produk digital dan aplikasi web yang sudah live</p>
+    </div>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <article class="project-card reveal">
+
+            <div class="project-thumb">
+                <img src="images/dafftech.png" alt="DAFFTECH — Katalog Produk Digital" loading="lazy">
+                <span class="project-badge">Katalog</span>
+            </div>
+
+            <div class="project-body">
+
+                <div class="project-head">
+                    <span class="project-num">01</span>
+                    <span class="project-status"><i class="fa-solid fa-circle"></i> Live</span>
+                </div>
+
+                <h3>DAFFTECH — Katalog Produk Digital</h3>
+
+                <p>
+                    Website katalog &amp; toko file digital: template website,
+                    portfolio, e-book, UI kit, dan resource creator. Dibangun
+                    dengan HTML, CSS, dan JavaScript murni tanpa framework,
+                    plus pembayaran Lynk.id dan form kontak EmailJS.
+                </p>
+
+                <ul class="tag-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Landing Page</li>
+                    <li>E-Commerce</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="https://daffaull18.github.io/dafftech-v2/" target="_blank" rel="noopener" class="btn btn-sm">
+                        Kunjungi Situs <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://lynk.id/dafftech" target="_blank" rel="noopener" class="btn2 btn-sm">
+                        Lihat Toko
+                    </a>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card reveal">
+
+            <div class="project-thumb">
+                <img src="images/kuradapt.png" alt="Kuradapt — Kurikulum Hidup" loading="lazy">
+                <span class="project-badge">Web App</span>
+            </div>
+
+            <div class="project-body">
+
+                <div class="project-head">
+                    <span class="project-num">02</span>
+                    <span class="project-status"><i class="fa-solid fa-circle"></i> Live</span>
+                </div>
+
+                <h3>Kuradapt — Kurikulum Hidup</h3>
+
+                <p>
+                    Platform edukasi "Kurikulum Hidup · Masa Depan Terarah".
+                    Punya 4 jenjang, papan pengumuman, perpustakaan digital,
+                    sistem kurikulum, dan koneksi dunia industri — lengkap
+                    dengan halaman masuk, ruang jenjang, dan mode gelap.
+                </p>
+
+                <ul class="tag-list">
+                    <li>SPA</li>
+                    <li>JavaScript</li>
+                    <li>Auth System</li>
+                    <li>Dashboard</li>
+                    <li>Responsive</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="https://daffaull18.github.io/kuradapt" target="_blank" rel="noopener" class="btn btn-sm">
+                        Kunjungi Situs <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://github.com/daffaull18" target="_blank" rel="noopener" class="btn2 btn-sm">
+                        GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="projects-cta reveal">
+        <div>
+            <h3>Mau lihat karya lainnya?</h3>
+            <p>Semua source code dan eksperimen saya ada di GitHub.</p>
+        </div>
+        <a href="https://github.com/daffaull18" target="_blank" rel="noopener" class="btn">
+            Buka GitHub <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+
+    <div class="section-title reveal">
+        <span class="sec-tag">04 — Layanan</span>
+        <h2>What I Do</h2>
+        <p>Layanan yang bisa saya kerjakan untukmu</p>
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card reveal">
+            <span class="service-num">01</span>
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Pengembangan Website</h3>
+            <p>
+                Website responsif untuk portofolio, brand, dan bisnis kecil —
+                landing page, company profile, sampai katalog produk.
+            </p>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> Landing page &amp; company profile</li>
+                <li><i class="fa-solid fa-check"></i> Nyaman di desktop &amp; mobile</li>
+                <li><i class="fa-solid fa-check"></i> Kode rapi, mudah diteruskan</li>
+            </ul>
+        </div>
+
+        <div class="service-card reveal featured">
+            <span class="service-num">02</span>
+            <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>Desain Kreatif</h3>
+            <p>
+                Desain visual bersih untuk produk digital, branding, dan konten —
+                konsisten antar platform dan siap pakai.
+            </p>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> Visual produk &amp; aset konten</li>
+                <li><i class="fa-solid fa-check"></i> Gaya konsisten antar platform</li>
+                <li><i class="fa-solid fa-check"></i> File siap pakai</li>
+            </ul>
+        </div>
+
+        <div class="service-card reveal">
+            <span class="service-num">03</span>
+            <div class="service-icon"><i class="fa-solid fa-signal"></i></div>
+            <h3>Internet Technician</h3>
+            <p>
+                Instalasi dan perawatan jaringan internet — dari rumah,
+                kantor, sampai lingkungan kecil yang butuh koneksi stabil.
+            </p>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> Instalasi &amp; konfigurasi jaringan</li>
+                <li><i class="fa-solid fa-check"></i> Troubleshooting koneksi</li>
+                <li><i class="fa-solid fa-check"></i> Problem solving cepat</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
 
-    <div class="section-title">
+    <div class="section-title reveal">
+        <span class="sec-tag">05 — Kontak</span>
         <h2>Contact Me</h2>
         <p>Let's work together</p>
     </div>
 
     <div class="contact-container">
 
-        <div class="contact-box">
+        <div class="contact-box reveal">
 
             <h3>Get In Touch</h3>
 
@@ -250,58 +517,107 @@ Muhammad <span>Daffa</span>
             </p>
 
             <div class="contact-info">
-                <p><i class="fa-solid fa-envelope"></i> daffaulumuddin01@gmail.com</p>
-                <p><i class="fa-solid fa-location-dot"></i> Kediri, Jawa Timur</p>
+
+                <a href="mailto:daffaulumuddin01@gmail.com" class="contact-item">
+                    <span class="ci-icon"><i class="fa-regular fa-envelope"></i></span>
+                    <div>
+                        <small>Email</small>
+                        <strong>daffaulumuddin01@gmail.com</strong>
+                    </div>
+                </a>
+
+                <div class="contact-item">
+                    <span class="ci-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div>
+                        <small>Lokasi</small>
+                        <strong>Kediri, Jawa Timur</strong>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="ci-icon"><i class="fa-regular fa-clock"></i></span>
+                    <div>
+                        <small>Waktu Balas</small>
+                        <strong>Normalnya di bawah 24 jam</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact-socials">
+                <a href="https://github.com/daffaull18" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/d_a_p_p_u_l/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@d_a_p_p_u_l" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://daffaull18.github.io/dafftech-v2/" target="_blank" rel="noopener" aria-label="DAFFTECH"><i class="fa-solid fa-store"></i></a>
             </div>
 
         </div>
 
-        <form id="contact-form" class="contact-form">
+        <form id="contact-form" class="contact-form reveal">
 
-    <input
-        type="text"
-        name="name"
-        placeholder="Nama"
-        required
-    >
+            <div class="field">
+                <input type="text" name="name" id="name" placeholder=" " required>
+                <label for="name">Nama</label>
+            </div>
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        required
-    >
+            <div class="field">
+                <input type="email" name="email" id="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
 
-    <input
-        type="text"
-        name="title"
-        placeholder="Subjek"
-        required
-    >
+            <div class="field">
+                <input type="text" name="title" id="title" placeholder=" " required>
+                <label for="title">Subjek</label>
+            </div>
 
-    <textarea
-        name="message"
-        rows="6"
-        placeholder="Pesan"
-        required
-    ></textarea>
+            <div class="field">
+                <textarea name="message" id="message" rows="5" placeholder=" " required></textarea>
+                <label for="message">Pesan</label>
+            </div>
 
-    <button type="submit" class="btn">
-        Kirim Pesan
-    </button>
+            <button type="submit" class="btn submit-btn">
+                <span>Kirim Pesan</span>
+                <i class="fa-regular fa-paper-plane"></i>
+            </button>
 
-</form>
+        </form>
 
     </div>
 
 </section>
 
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="js/script.js"></script>
-
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-    <p>© 2026 Muhammad Daffa | Designed & Developed by Muhammad Daffa</p>
+
+    <div class="footer-top">
+        <a href="#home" class="logo">Daffa<span>.</span></a>
+        <p>Graphic Designer • Internet Technician • Freelancer</p>
+    </div>
+
+    <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-bottom">
+        <p>© <span id="year"></span> Muhammad Daffa. Dibuat &amp; dirawat di Indonesia.</p>
+        <a href="https://daffaull18.github.io/dafftech-v2/" target="_blank" rel="noopener">
+            Katalog DAFFTECH <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+
 </footer>
+
+<a href="#home" class="to-top" id="to-top" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
