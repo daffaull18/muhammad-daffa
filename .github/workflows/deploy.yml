@@ -1,0 +1,53 @@
+name: Deploy ke Netlify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Zip situs
+        run: |
+          python3 - <<'PY'
+          import zipfile, os
+          out = "site.zip"
+          with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
+              for root, dirs, files in os.walk("."):
+                  dirs[:] = [d for d in dirs if d not in (".git", ".github")]
+                  for f in files:
+                      if f == "site.zip":
+                          continue
+                      p = os.path.join(root, f)
+                      z.write(p, os.path.relpath(p, "."))
+          print("zip:", os.path.getsize(out), "byte")
+          PY
+
+      - name: Deploy ke Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          RESP=$(curl -s -X POST \
+            -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+            -H "Content-Type: application/zip" \
+            --data-binary "@site.zip" \
+            "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/deploys")
+          echo "$RESP" | python3 -c "import sys,json;d=json.load(sys.stdin);print('state:',d.get('state'));print('err:',d.get('error_message'))"
+
+      - name: Matikan proteksi & badge
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          curl -s -X PATCH \
+            -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"sso_login":false,"built_with_badge_enabled":false}' \
+            "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID" > /dev/null
+          echo "pengaturan situs dipastikan publik & tanpa badge"
