@@ -6,8 +6,8 @@
 set -e
 
 # --- konfigurasi ---
-TOKEN_FILE="/data/data/com.termux/files/usr/tmp/opencode/nl_token.txt"
-SITE_ID="548e2036-1809-4770-9d55-3821898addd9"
+TOKEN_FILE="$HOME/.netlify_token"
+SITE_ID_FILE="$HOME/.netlify_site_id"
 SITE_URL="https://muhammad-daffa.netlify.app"
 API="https://api.netlify.com/api/v1"
 DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -18,7 +18,13 @@ if [ ! -f "$TOKEN_FILE" ]; then
     exit 1
 fi
 
+if [ ! -f "$SITE_ID_FILE" ]; then
+    echo "❌ Site ID tidak ada di $SITE_ID_FILE"
+    exit 1
+fi
+
 TOKEN=$(cat "$TOKEN_FILE")
+SITE_ID=$(cat "$SITE_ID_FILE")
 
 echo "📦 Membuat zip dari $DIR ..."
 ZIP="/data/data/com.termux/files/usr/tmp/opencode/deploy-$(date +%s).zip"

@@ -17,3 +17,8 @@ npm-debug.log*
 
 # Dependencies (site ini statis, tidak perlu node_modules)
 node_modules/
+
+# Kredensial deploy (jangan pernah ikut ter-commit)
+.netlify_token
+.netlify_site_id
+*.zip

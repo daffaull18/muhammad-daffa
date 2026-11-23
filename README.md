@@ -53,11 +53,11 @@ Semua teks ada di `index.html`. Ganti lalu simpan, refresh browser.
 - **Warna / tampilan** → `css/style.css` (variabel di blok `:root`, baris paling atas)
 - **Animasi, typing, form** → `js/script.js`
 
-## Cara deploy ke Netlify
+## Cara deploy
 
-**Cepat (tanpa Git):** seret folder ini ke https://app.netlify.com/drop
+### A. Otomatis (sudah aktif ✅)
 
-**Otomatis (dengan Git):**
+Push ke GitHub, Netlify deploy sendiri lewat GitHub Actions:
 
 ```bash
 git add .
@@ -65,7 +65,35 @@ git commit -m "update portofolio"
 git push
 ```
 
-Netlify akan deploy sendiri setiap kali push ke `main`.
+Workflow: `.github/workflows/deploy.yml`
+Secret: `NETLIFY_AUTH_TOKEN`, `NETLIFY_SITE_ID`
+
+### B. Manual satu perintah
+
+```bash
+bash deploy.sh
+```
+
+Zip folder → upload ke Netlify → tunggu `ready` → pastikan situs publik & tanpa badge.
+
+### C. Tanpa Git
+
+Seret folder ini ke https://app.netlify.com/drop
+
+## Situs
+
+| | |
+|---|---|
+| Live | https://muhammad-daffa.netlify.app |
+| Admin | https://app.netlify.com/projects/muhammad-daffa |
+| GitHub | https://github.com/daffaull18/muhammad-daffa |
+
+Token & site ID disimpan di `~/.netlify_token` dan `~/.netlify_site_id`
+(sudah masuk `.gitignore`, tidak ikut ter-commit).
+
+> **Badge "Powered by Netlify":** dimatikan lewat field
+> `built_with_badge_enabled: false`. Kalau muncul lagi,
+> `deploy.sh` dan workflow otomatis mematikannya.
 
 ### Form kontak
 
